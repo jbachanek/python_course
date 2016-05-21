@@ -29,7 +29,7 @@ import numpy as np
 from zadanie3 import reduce
 
 out = "banner.txt"
-infile ='../../resources/lab1/meil.png'
+infile ='/home/kuba/PycharmProjects/python_course/resources/lab2/meil.png'
 
 img = matplotlib.image.imread(infile)
 
@@ -64,10 +64,10 @@ light = np.copy(dark)
 
 for i in range(nsize):
     for j in range(nsize):
-        if hsvimg[i, j, 2] < 0.3:
+        if (hsvimg[i, j, 2] < 0.3):
             cliped[i, j, 2] = 0
             dark[i, j] = True
-        elif hsvimg[i, j][2] < 0.6:
+        elif (hsvimg[i, j][2] < 0.6):
             cliped[i, j][2] = .3
             light[i, j] = True
         else:
@@ -76,8 +76,6 @@ for i in range(nsize):
 _, (a1, a2, a3) = plt.subplots(1, 3)
 
 print a1
-
-exit()
 
 a1.imshow(nonreduced)
 a2.imshow(colors.hsv_to_rgb(hsvimg))

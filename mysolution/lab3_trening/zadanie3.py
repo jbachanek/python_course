@@ -44,8 +44,8 @@ def reduce(A, rozmiar):
             macierz[i][j] = s / k
     return macierz
 
-m = [[float(i*j) for i in range(5)] for j in range(5)]
-
-print np.array(m)
-
-print np.array(reduce(m, (3, 3)))
+# m = [[float(i*j) for i in range(5)] for j in range(5)]
+#
+# print np.array(m)
+#
+# print np.array(reduce(m, (3, 3)))

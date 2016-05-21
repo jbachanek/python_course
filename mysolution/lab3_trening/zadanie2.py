@@ -4,7 +4,7 @@ from numpy.linalg import norm
 from scipy.integrate import odeint
 from matplotlib import animation
 
-m, k, l = [10, 10, 10]
+m, k, l = [1, 10, 10]
 g = [0,-9.81]
 x1=[0,0]
 x2=[-l,0]
@@ -12,7 +12,7 @@ u1=[0,50]
 u2=[-30,30]
 t_k = 10
 n = 500
-nFrames = 100
+nFrames = 300
 
 def equation(Y, t):
 
